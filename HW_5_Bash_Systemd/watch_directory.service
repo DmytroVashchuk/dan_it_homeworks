@@ -1,0 +1,13 @@
+[Unit]
+Description=Watch Directory Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/watch_directory.sh
+Restart=always
+User=dmytro
+Environment=HOME=/home/dmytro
+
+[Install]
+WantedBy=multi-user.target
+
