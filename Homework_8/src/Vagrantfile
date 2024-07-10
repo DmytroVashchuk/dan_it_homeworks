@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+
+  # Налаштування публічної мережі
+  config.vm.network "public_network"
+  
+  # Налаштування для автоматичної установки nginx і перенаправлення портів
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y nginx
+    sed -i 's/listen 80 default_server;/listen 82 default_server;/g' /etc/nginx/sites-available/default
+    systemctl restart nginx
+  SHELL
+end
+
