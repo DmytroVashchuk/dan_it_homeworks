@@ -1,0 +1,557 @@
+GET all students:
+[
+  {
+    "age": " 29",
+    "first_name": "Oksana",
+    "id": "1",
+    "last_name": " Bobeshko"
+  },
+  {
+    "age": "23",
+    "first_name": "Ivan",
+    "id": "2",
+    "last_name": " Beh"
+  },
+  {
+    "age": "30",
+    "first_name": "James",
+    "id": "3",
+    "last_name": "Bond"
+  },
+  {
+    "age": "21",
+    "first_name": "Michael",
+    "id": "4",
+    "last_name": "Brown"
+  },
+  {
+    "age": "28",
+    "first_name": "Ivan",
+    "id": "5",
+    "last_name": "Melnyk"
+  },
+  {
+    "age": "22",
+    "first_name": "David",
+    "id": "6",
+    "last_name": "Williams"
+  },
+  {
+    "age": "20",
+    "first_name": "Linda",
+    "id": "7",
+    "last_name": "Davis"
+  },
+  {
+    "age": "19",
+    "first_name": "Robert",
+    "id": "8",
+    "last_name": "Garcia"
+  },
+  {
+    "age": "21",
+    "first_name": "Karen",
+    "id": "9",
+    "last_name": "Miller"
+  },
+  {
+    "age": "22",
+    "first_name": "James",
+    "id": "10",
+    "last_name": "Martinez"
+  },
+  {
+    "age": "25",
+    "first_name": "Anna",
+    "id": "11",
+    "last_name": "White"
+  },
+  {
+    "age": "30",
+    "first_name": "Dmytro",
+    "id": "12",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "13",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "14",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "15",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "16",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "17",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "18",
+    "last_name": "Melnyl"
+  }
+]
+
+POST create student Dmytro:
+{
+  "age": 20,
+  "first_name": "Dmytro",
+  "id": 19,
+  "last_name": "Vashchuk"
+}
+
+POST create student Roma:
+{
+  "age": 22,
+  "first_name": "Roma",
+  "id": 20,
+  "last_name": "TOR"
+}
+
+POST create student Mykola:
+{
+  "age": 24,
+  "first_name": "Mykola",
+  "id": 21,
+  "last_name": "Melnyl"
+}
+
+GET all students after adding new ones:
+[
+  {
+    "age": " 29",
+    "first_name": "Oksana",
+    "id": "1",
+    "last_name": " Bobeshko"
+  },
+  {
+    "age": "23",
+    "first_name": "Ivan",
+    "id": "2",
+    "last_name": " Beh"
+  },
+  {
+    "age": "30",
+    "first_name": "James",
+    "id": "3",
+    "last_name": "Bond"
+  },
+  {
+    "age": "21",
+    "first_name": "Michael",
+    "id": "4",
+    "last_name": "Brown"
+  },
+  {
+    "age": "28",
+    "first_name": "Ivan",
+    "id": "5",
+    "last_name": "Melnyk"
+  },
+  {
+    "age": "22",
+    "first_name": "David",
+    "id": "6",
+    "last_name": "Williams"
+  },
+  {
+    "age": "20",
+    "first_name": "Linda",
+    "id": "7",
+    "last_name": "Davis"
+  },
+  {
+    "age": "19",
+    "first_name": "Robert",
+    "id": "8",
+    "last_name": "Garcia"
+  },
+  {
+    "age": "21",
+    "first_name": "Karen",
+    "id": "9",
+    "last_name": "Miller"
+  },
+  {
+    "age": "22",
+    "first_name": "James",
+    "id": "10",
+    "last_name": "Martinez"
+  },
+  {
+    "age": "25",
+    "first_name": "Anna",
+    "id": "11",
+    "last_name": "White"
+  },
+  {
+    "age": "30",
+    "first_name": "Dmytro",
+    "id": "12",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "13",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "14",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "15",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "16",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "17",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "18",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "19",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "20",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "21",
+    "last_name": "Melnyl"
+  }
+]
+
+PATCH update age of student 2:
+{
+  "age": 23,
+  "first_name": "Ivan",
+  "id": "2",
+  "last_name": " Beh"
+}
+
+GET student 2 info:
+{
+  "age": "23",
+  "first_name": "Ivan",
+  "id": "2",
+  "last_name": " Beh"
+}
+
+PUT update student 3 info:
+{
+  "age": 30,
+  "first_name": "James",
+  "id": "3",
+  "last_name": "Bond"
+}
+
+GET student 3 info:
+{
+  "age": "30",
+  "first_name": "James",
+  "id": "3",
+  "last_name": "Bond"
+}
+
+GET all students after updates:
+[
+  {
+    "age": " 29",
+    "first_name": "Oksana",
+    "id": "1",
+    "last_name": " Bobeshko"
+  },
+  {
+    "age": "23",
+    "first_name": "Ivan",
+    "id": "2",
+    "last_name": " Beh"
+  },
+  {
+    "age": "30",
+    "first_name": "James",
+    "id": "3",
+    "last_name": "Bond"
+  },
+  {
+    "age": "21",
+    "first_name": "Michael",
+    "id": "4",
+    "last_name": "Brown"
+  },
+  {
+    "age": "28",
+    "first_name": "Ivan",
+    "id": "5",
+    "last_name": "Melnyk"
+  },
+  {
+    "age": "22",
+    "first_name": "David",
+    "id": "6",
+    "last_name": "Williams"
+  },
+  {
+    "age": "20",
+    "first_name": "Linda",
+    "id": "7",
+    "last_name": "Davis"
+  },
+  {
+    "age": "19",
+    "first_name": "Robert",
+    "id": "8",
+    "last_name": "Garcia"
+  },
+  {
+    "age": "21",
+    "first_name": "Karen",
+    "id": "9",
+    "last_name": "Miller"
+  },
+  {
+    "age": "22",
+    "first_name": "James",
+    "id": "10",
+    "last_name": "Martinez"
+  },
+  {
+    "age": "25",
+    "first_name": "Anna",
+    "id": "11",
+    "last_name": "White"
+  },
+  {
+    "age": "30",
+    "first_name": "Dmytro",
+    "id": "12",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "13",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "14",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "15",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "16",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "17",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "18",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "19",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "20",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "21",
+    "last_name": "Melnyl"
+  }
+]
+
+DELETE student 1:
+{
+  "message": "Student deleted successfully"
+}
+
+GET all students after deletion:
+[
+  {
+    "age": "23",
+    "first_name": "Ivan",
+    "id": "2",
+    "last_name": " Beh"
+  },
+  {
+    "age": "30",
+    "first_name": "James",
+    "id": "3",
+    "last_name": "Bond"
+  },
+  {
+    "age": "21",
+    "first_name": "Michael",
+    "id": "4",
+    "last_name": "Brown"
+  },
+  {
+    "age": "28",
+    "first_name": "Ivan",
+    "id": "5",
+    "last_name": "Melnyk"
+  },
+  {
+    "age": "22",
+    "first_name": "David",
+    "id": "6",
+    "last_name": "Williams"
+  },
+  {
+    "age": "20",
+    "first_name": "Linda",
+    "id": "7",
+    "last_name": "Davis"
+  },
+  {
+    "age": "19",
+    "first_name": "Robert",
+    "id": "8",
+    "last_name": "Garcia"
+  },
+  {
+    "age": "21",
+    "first_name": "Karen",
+    "id": "9",
+    "last_name": "Miller"
+  },
+  {
+    "age": "22",
+    "first_name": "James",
+    "id": "10",
+    "last_name": "Martinez"
+  },
+  {
+    "age": "25",
+    "first_name": "Anna",
+    "id": "11",
+    "last_name": "White"
+  },
+  {
+    "age": "30",
+    "first_name": "Dmytro",
+    "id": "12",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "13",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "14",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "15",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "16",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "17",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "18",
+    "last_name": "Melnyl"
+  },
+  {
+    "age": "20",
+    "first_name": "Dmytro",
+    "id": "19",
+    "last_name": "Vashchuk"
+  },
+  {
+    "age": "22",
+    "first_name": "Roma",
+    "id": "20",
+    "last_name": "TOR"
+  },
+  {
+    "age": "24",
+    "first_name": "Mykola",
+    "id": "21",
+    "last_name": "Melnyl"
+  }
+]
+
