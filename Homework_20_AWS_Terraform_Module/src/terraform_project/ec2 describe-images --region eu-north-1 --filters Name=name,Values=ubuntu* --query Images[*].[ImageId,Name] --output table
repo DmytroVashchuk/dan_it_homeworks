@@ -1,0 +1,72 @@
+------------------------------------------------------
+|            DescribeInstanceTypeOfferings           |
++----------------------------------------------------+
+[2m[33m|[0m|               InstanceTypeOfferings              |[2m[33m|[0m
+[2m[33m|[0m+------------------+--------------+----------------+[2m[33m|[0m
+[2m[33m|[0m|   InstanceType   |  Location    | LocationType   |[2m[33m|[0m
+[2m[33m|[0m+------------------+--------------+----------------+[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr5dn.24xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7a.12xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5d.metal[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc7g.metal[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34md2.xlarge[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr6idn.16xlarge[0m  |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc7g.8xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm6g.2xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr6i.xlarge[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr5dn.2xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr6g.8xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7i.4xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5.large[0m        |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7gd.16xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm6idn.32xlarge[0m  |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm6in.8xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr5d.24xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mhpc7a.12xlarge[0m  |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm6in.2xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr6i.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7g.2xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7a.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6g.12xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7i-flex.xlarge[0m |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5.metal[0m        |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mg6.4xlarge[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7a.2xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm5d.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mi3.8xlarge[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr6gd.12xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gn.2xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gn.12xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7i.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gd.4xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gd.8xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm5d.2xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7gd.4xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mu-9tb1.112xlarge[0m|  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc7i-flex.xlarge[0m |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm6g.12xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mg4dn.4xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc7a.32xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7a.medium[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7a.16xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gd.xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc7a.4xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7gd.xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6g.medium[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mg6.48xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34minf2.xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5n.9xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7g.8xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5d.xlarge[0m      |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mg4dn.12xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc6gn.xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5a.4xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mx2idn.24xlarge[0m  |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr7g.8xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mm7g.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mgr6.4xlarge[0m     |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mt4g.small[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mc5n.large[0m       |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mr5dn.4xlarge[0m    |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m|  [1m[34mg4dn.16xlarge[0m   |  [1m[34meu-north-1[0m  |  [1m[34mregion[0m        |[2m[33m|[0m
+[2m[33m|[0m
