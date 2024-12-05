@@ -1,0 +1,3 @@
+[app]
+51.20.105.227 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/dmytro/terraform_project_2/Dmytro.pem
+13.60.71.250 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/dmytro/terraform_project_2/Dmytro.pem
