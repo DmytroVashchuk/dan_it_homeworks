@@ -1,0 +1,84 @@
+pipeline {
+    agent any  
+
+    environment {
+        DOCKER_CREDENTIALS = 'docker-hub-credentials' 
+        IMAGE_NAME = 'dmytrovashchuk/test-nodejs-app' 
+    }
+
+    stages {
+        stage('Pull Code') {
+            steps {
+                script {
+                    echo 'Pulling code from GitHub...'
+                    
+                    git url: 'https://github.com/DmytroVashchuk/test-nodejs-app.git', branch: 'main', credentialsId: 'your-jenkins-credentials-id'
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    echo 'Building Docker Image...'
+                    // Перевірка Docker
+                    sh 'docker --version'
+
+                    
+                    sh 'docker build -t ${IMAGE_NAME} .'
+                }
+            }
+        }
+
+        stage('Run Tests') {
+    steps {
+        catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+            script {
+                echo 'Running tests...'
+                
+                sh 'npm test' 
+            }
+        }
+    }
+    post {
+        failure {
+            script {
+                echo 'Tests failed'
+            }
+        }
+    }
+}
+
+        stage('Push to Docker Hub') {
+    steps {
+        script {
+            def IMAGE_NAME = 'dmytrovashchuk/test-nodejs-app'
+            def DOCKER_CREDENTIALS = 'docker-hub-credentials'
+            
+            echo 'Pushing Docker image to Docker Hub...'
+            docker.withRegistry('', DOCKER_CREDENTIALS) {
+                docker.image(IMAGE_NAME).push('latest')
+            }
+        }
+    }
+}
+
+        stage('Failure') {
+            when {
+                expression {
+                    return currentBuild.result == 'FAILURE'
+                }
+            }
+            steps {
+                echo 'Tests failed'
+            }
+        }
+    }
+
+    post {
+        failure {
+            echo "Pipeline failed!"
+            
+        }
+    }
+}

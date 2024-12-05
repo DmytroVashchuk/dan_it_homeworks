@@ -1,0 +1,52 @@
+pipeline {
+    agent any  
+
+    environment {
+        GIT_REPO = 'https://github.com/DmytroVashchuk/test-nodejs-app.git'  
+        BRANCH_NAME = 'main'  
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                script {
+                    echo 'Cloning the repository from GitHub...'
+                    git branch: BRANCH_NAME, url: GIT_REPO  
+                }
+            }
+        }
+
+        stage('Build Placeholder') {
+            steps {
+                script {
+                    echo 'No build step needed for this project.'  
+                }
+            }
+        }
+
+        stage('Run Placeholder Test') {
+            steps {
+                script {
+                    echo 'No tests to run for this project.'  
+                }
+            }
+        }
+
+        stage('Success') {
+            steps {
+                script {
+                    echo "?? Pipeline completed successfully!"
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "?? Pipeline completed successfully!"
+        }
+        failure {
+            echo "? Pipeline failed! Check the logs for details."
+        }
+    }
+}

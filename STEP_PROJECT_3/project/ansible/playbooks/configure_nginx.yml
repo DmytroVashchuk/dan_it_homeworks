@@ -1,0 +1,29 @@
+---
+- name: Configure Nginx as reverse proxy for Jenkins
+  hosts: jenkins_master
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Configure Nginx for Jenkins
+      template:
+        src: /home/dmytro/project/ansible/templates/nginx_jenkins.conf.j2
+        dest: /etc/nginx/sites-available/jenkins
+        mode: '0644'
+
+    - name: Enable Jenkins site configuration
+      file:
+        src: /etc/nginx/sites-available/jenkins
+        dest: /etc/nginx/sites-enabled/jenkins
+        state: link
+
+    - name: Test Nginx configuration
+      command: nginx -t
+
+    - name: Restart Nginx service
+      systemd:
+        name: nginx
+        state: restarted

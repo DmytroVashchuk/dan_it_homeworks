@@ -106,7 +106,7 @@ resource "aws_instance" "public_instance" {
   ami                         = "ami-0ed6534c7d6a8e78f"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.public_subnet.id
-  vpc_security_group_ids      = [aws_security_group.public_sg.id]  # Виправлення на vpc_security_group_ids
+  vpc_security_group_ids      = [aws_security_group.public_sg.id]  
   associate_public_ip_address = true  # Додано для публічної IP-адреси
 
   tags = {
@@ -118,7 +118,7 @@ resource "aws_instance" "private_instance" {
   ami                    = "ami-0ed6534c7d6a8e78f"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet.id
-  vpc_security_group_ids = [aws_security_group.private_sg.id]  # Виправлення на vpc_security_group_ids
+  vpc_security_group_ids = [aws_security_group.private_sg.id]  
 
   tags = {
     Name = "PrivateInstance"

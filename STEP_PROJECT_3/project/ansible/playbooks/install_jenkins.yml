@@ -1,0 +1,108 @@
+---
+- name: Install Jenkins on Jenkins Master using Docker
+  hosts: jenkins_master
+  become: true
+
+  vars:
+    compose_version: "1.29.2"
+    compose_url: "https://github.com/docker/compose/releases/download/{{ compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required dependencies
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+
+    - name: Remove old Docker packages (if any)
+      apt:
+        name:
+          - docker
+          - docker-engine
+          - docker.io
+          - containerd
+          - runc
+        state: absent
+        purge: yes
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"
+        state: present
+        filename: "docker"
+
+    - name: Install Docker and Docker Compose
+      apt:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Install Docker Compose (if not installed)
+      get_url:
+        url: "{{ compose_url }}"
+        dest: /usr/local/bin/docker-compose
+        mode: '0755'
+
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Verify Docker installation
+      command: docker --version
+      register: docker_version
+
+    - name: Show Docker version
+      debug:
+        var: docker_version.stdout
+
+    - name: Pull Jenkins Docker image
+      docker_image:
+        name: jenkins/jenkins
+        tag: lts
+        source: pull
+
+    - name: Create Jenkins container
+      docker_container:
+        name: jenkins
+        image: jenkins/jenkins:lts
+        state: started
+        restart_policy: always
+        published_ports:
+          - "8080:8080"
+          - "50000:50000"
+        volumes:
+          - jenkins_home:/var/jenkins_home
+
+    - name: Wait for Jenkins to initialize
+      wait_for:
+        path: /var/jenkins_home/secrets/initialAdminPassword
+        delay: 10
+        timeout: 300
+        state: present
+
+    - name: Retrieve Jenkins initial password
+      command: "sudo docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword"
+      register: jenkins_password
+      retries: 5
+      delay: 15
+      until: jenkins_password.rc == 0
+
+    - name: Show Jenkins initial password
+      debug:
+        msg: "Jenkins initial admin password: {{ jenkins_password.stdout }}"
