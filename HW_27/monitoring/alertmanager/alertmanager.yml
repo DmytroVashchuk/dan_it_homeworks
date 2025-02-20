@@ -1,0 +1,22 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: 'telegram'
+
+receivers:
+  - name: 'telegram'
+    telegram_configs:
+      - bot_token: "7824628999:AAFR4bP-U3Ej3m3F30UqJvupRksM2noaQRw"
+        chat_id: 521727580
+        message: "{{ .CommonAnnotations.summary }}"
+
+# Правила для алертів
+alert_relabel_configs:
+  - source_labels: ['alertname']
+    target_label: 'severity'
+    replacement: 'critical'  
