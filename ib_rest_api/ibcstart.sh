@@ -7,5 +7,5 @@ envsubst < /opt/ibc/config.ini > /opt/ibc/config_runtime.ini
 echo "[INFO] Створено config_runtime.ini:"
 cat /opt/ibc/config_runtime.ini
 
-# Тут міг би бути запуск IBC або інша логіка
+
 tail -f /dev/null  # Залишити контейнер активним
