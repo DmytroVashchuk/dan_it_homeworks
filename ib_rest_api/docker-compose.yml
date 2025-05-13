@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   ib_gateway:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.ib_gateway  # Вказуємо конкретний Dockerfile для IB Gateway
     container_name: ib_gateway
     environment:
       - TWS_USER=${TWS_USER}
@@ -13,18 +15,18 @@ services:
       - IB_HOST=${IB_HOST}
       - IB_CLIENT_ID=${IB_CLIENT_ID}
     ports:
-      - "8021:8000"  # FastAPI
       - "7497:7497"  # Порт IB Gateway
     volumes:
       - ./data:/data
     restart: always
 
   fastapi:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi  # Вказуємо конкретний Dockerfile для FastAPI
     container_name: fastapi
     ports:
-      - "8022:8000"
+      - "8029:8000"
     depends_on:
       - ib_gateway
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     restart: always

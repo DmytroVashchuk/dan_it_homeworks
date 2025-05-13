@@ -1,4 +1,4 @@
 fastapi
-uvicorn[standard]
+uvicorn
 ib_insync
 python-dotenv

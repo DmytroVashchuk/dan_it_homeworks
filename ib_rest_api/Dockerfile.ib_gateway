@@ -1,3 +1,4 @@
+# Dockerfile for IB Gateway
 FROM python:3.10
 
 # Встановлюємо залежності: Java, wget, unzip, бібліотеки для графічного інтерфейсу, supervisor
@@ -7,16 +8,17 @@ RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
     libxext6 libxrender1 libxtst6 libxi6 \
     supervisor \
+    gettext \
+    dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
-
+# Встановлюємо JAVA_HOME
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
-
-# Завантажити та встановити IB Gateway
+# Завантажити та встановити IB Gateway без інтерактивного встановлення
 RUN wget https://download2.interactivebrokers.com/installers/ibgateway/stable-standalone/ibgateway-stable-standalone-linux-x64.sh -O /tmp/ibgateway-installer.sh && \
     chmod +x /tmp/ibgateway-installer.sh && \
-    /tmp/ibgateway-installer.sh -q && \
+    /tmp/ibgateway-installer.sh -q -dir /opt/ibgateway && \
     rm /tmp/ibgateway-installer.sh
 
 # Завантажити IBC (IB Controller)
@@ -25,21 +27,17 @@ RUN wget https://github.com/IbcAlpha/IBC/releases/download/3.22.0/IBCLinux-3.22.
     chmod +x /opt/ibc/scripts/*.sh && \
     rm /tmp/IBC.zip
 
-
-# Копіюємо код проєкту
-WORKDIR /app
-COPY requirements.txt /app/requirements.txt
-
-# Встановлюємо Python залежності
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Копіюємо конфігурацію для IBC, supervisord і стартовий скрипт
+# Копіюємо конфігурацію для IBC
 COPY config.ini /opt/ibc/config.ini
 COPY supervisord.conf /etc/supervisord.conf
 COPY ibcstart.sh /opt/ibcstart.sh
 RUN chmod +x /opt/ibcstart.sh
 
+# Переміщуємося до директорії з IB Gateway
+WORKDIR /opt/ibgateway
 
-
-# Запуск супервізора для контролю процесів
+# Встановлюємо запуск IB Gateway через супервізор
 CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+
+# Порти для IB Gateway
+EXPOSE 7497
